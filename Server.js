@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 const app = express()
 
 //connect to mongodb
-mongoose.connect('mongodb://localhost/islington',{ useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://localhost/islington',{ useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
 mongoose.Promise = global.Promise;
 
 //middlewares

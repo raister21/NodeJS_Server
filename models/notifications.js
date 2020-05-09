@@ -1,22 +1,23 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
-const NotificationSchema = new Schema({
-    poster: {
+const StaffSchema = new Schema({
+    staffName: {
         type: String,
-        required: [true,'Poster of the notification required']
+        required: [true]
     },
+});
+
+const NotificationSchema = new Schema({
+    poster: [
+        StaffSchema
+    ],
     post: {
         type: String,
         required: [true,'Post cannot be empty']
     },
     time: {
         type: Date,
-    },
-
-    posterId: {
-        type: String,
-        required: [true,'Cannot be empty'] 
     }
 });
 

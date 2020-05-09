@@ -6,13 +6,9 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
-    email: {
+    class: {
         type: String,
         required: true
-    },
-    staff: {
-        type: Boolean,
-        default: false
     }
     
 });
